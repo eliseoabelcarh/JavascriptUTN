@@ -1,0 +1,98 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ff414e ;
+}
+.padre{
+    text-align: center;
+    color: #FF6347;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color :#353535;
+
+}
+.ti {
+    font-weight: bold;
+    font-size: 50px;
+}
+.imgProd {
+    width: 30%;
+
+}
+
+.container {
+    width: 200px;
+    height: 700px;
+    margin: 30px auto;
+}
+.card {
+    border-radius: 25px;
+    box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+}
+.card-head {
+    position: relative;
+    height: 252px;
+    background: #fa782e;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
+    border-radius: 25px 25px 0 0;
+  }
+
+.marca {
+
+    font-size: 20px;
+    margin-left: 20px;
+    color: white;
+    position: relative;
+
+}
+.card-body {
+    
+    height: 95px;
+    background:#ffffff ;
+    border-radius:0 0 25px 25px ;
+}
+.card-logo {
+    width: 90px;
+    margin: 20px;
+
+}
+.product-img {
+    position: absolute;
+    padding-top: 1px;
+    margin-left: -50px;
+}
+.descrip {
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.prec {
+    color: white;
+    font-size: 50px;
+    
+}
+.product-price {
+    position: absolute;
+    background: #11e95b;
+    padding: 20px 40px;
+    border-radius: 7px 7px 7px 7px;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+.signoPesos {
+    color: white;
+    font-size: 30px;
+    
+}
+.prec-descript {
+    padding: 20px 20px 5px 20px;
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}

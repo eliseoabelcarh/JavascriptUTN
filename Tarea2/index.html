@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>UTN javascript tarea 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'/>
+    <script src='main.js'></script>
+    <script>
+    var descripcionProducto = prompt("elija la descripción del producto LENTES", "descripcion");
+    var precioProducto = prompt("Cuál es el precio del producto LENTES?");
+    var precioProductoInt = parseInt(precioProducto)
+    var precioProductoIVA = precioProductoInt + (precioProductoInt*0.21)
+
+    </script>
+    
+</head>
+<body>
+    <div class = "container">
+        <div class = "card">
+            <div class ="card-head"> 
+                <img src="https://s5.postimg.cc/wy79025cz/nike_Logo_White.png" alt="logo" class="card-logo">
+                <img src="https://s5.postimg.cc/j9r8yf9gn/sws1.png" alt="Shoe" class="product-img">
+                <h2 class = "marca">NIKE</h2> 
+                <script>
+                    document.write("<p class = 'descrip'>" + descripcionProducto + "</p>");
+                </script>
+            </div>
+            <div class = "card-body">
+                <a class ="prec-descript">PRECIO SIN IVA: $ 
+                    <script >
+                        document.write( precioProductoInt );
+                    </script>
+                </a>
+                <div class = "product-price">
+                    <script>
+                        document.write("<a class = 'signoPesos'>TOTAL:  $ </a><a class = 'prec'>" + precioProductoIVA + "</a>");
+                    </script>
+
+                </div>
+
+                
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>
