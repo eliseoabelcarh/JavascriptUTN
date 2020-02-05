@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <title>dashboard</title>
+
+</head>
+<body>
+    
+    
+    <body>
+
+
+
+        <div class="contenedor">
+            <div class="login-screen" >
+                
+                <div id= "caja-info">Bienvenido!
+                </div>
+                
+                <div class="app-title">
+                    <h1>Cambiar Dólares</h1>
+                </div>
+    
+                <div class="login-form">
+                    
+                    <div id="contenedor-calculadora">
+
+                        
+                        
+                        <div id = "vosenvias">Vos enviás:</div>
+
+                        <div id = "contenedor1">
+                            
+                            <input type="number" value="100" onkeyup="actualizarCajas()" id="moneda1-data">
+                            <div id = "monedasymbol1">ARS</div>
+                        </div>
+
+                        <div id = "rueda"><img id="icono-change" src="change.svg"></div>
+                       
+                        <div id = "vosrecibis">Vos recibís:</div>
+
+                        <div id = "contenedor2">
+                            
+                            <input type="number" value="5" onkeyup="actualizarCajas2()"  id="moneda2-data">
+                            <div id = "monedasymbol2">USD</div>
+                         </div>
+
+
+
+                         
+
+                    </div>
+                    
+    
+                    <a id = "CambiarBoton" class="btn " href="#">Cambiar Ahora!</a>
+                    
+                    <div id = "caja-mensaje" style = "display : none" >
+                        <div id = "mensaje"></div>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+    
+	<script src="funciones.js" ></script>
+	<script src="calculadora.js" ></script>
+		
+</body>
+    
+   
+    
+</body>
+</html>
