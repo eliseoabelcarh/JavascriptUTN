@@ -181,7 +181,7 @@ function parseURLParams(url) {
 
 
 function leerPrecioUSDARS(consulta){
-    return fetch(consulta)
+    /*return fetch(consulta)
     .then(response => response.json())
     .then(data => {        
         var objetoDeDatos = data
@@ -189,7 +189,24 @@ function leerPrecioUSDARS(consulta){
         actualizarValoresDolar(this.inputDolar,this.inputPesos)
         mostrarPrecioCambio(objetoDeDatos)
                 })
-    .catch(error => precioCambio = 62.00 )
+    .catch(error => console.error(error) )
+    */
+
+   var data = {
+    "success":true,
+    "terms":"https:\/\/currencylayer.com\/terms",
+    "privacy":"https:\/\/currencylayer.com\/privacy",
+    "timestamp":1581523746,
+    "source":"USD",
+    "quotes":{
+      "USDARS":61.232397
+    }
+  }
+   var objetoDeDatos = data
+   precioCambio = objetoDeDatos.quotes.USDARS
+   actualizarValoresDolar(this.inputDolar,this.inputPesos)
+   mostrarPrecioCambio(objetoDeDatos)
+
 }
 
 function mostrarPrecioCambio(){
