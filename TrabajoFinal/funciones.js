@@ -38,6 +38,7 @@ try {
         return info
     
 } catch (error) {
+    console.error(error)
     alert("hubo algún error volveremos a empezar")
     setTimeout(redireccionarHome, 100)
     
@@ -188,7 +189,7 @@ function leerPrecioUSDARS(consulta){
         actualizarValoresDolar(this.inputDolar,this.inputPesos)
         mostrarPrecioCambio(objetoDeDatos)
                 })
-    .catch(error => console.error(error))
+    .catch(error => precioCambio = 62.00 )
 }
 
 function mostrarPrecioCambio(){
