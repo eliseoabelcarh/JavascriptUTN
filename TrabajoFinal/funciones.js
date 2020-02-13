@@ -181,7 +181,9 @@ function parseURLParams(url) {
 
 
 function leerPrecioUSDARS(consulta){
-    /*return fetch(consulta)
+    /* -----ESTA FUNCIÓN SE OMITE YA QUE CHROME BLOQUEA REQUEST SIN HTTPS
+    
+    return fetch(consulta)
     .then(response => response.json())
     .then(data => {        
         var objetoDeDatos = data
@@ -191,7 +193,7 @@ function leerPrecioUSDARS(consulta){
                 })
     .catch(error => console.error(error) )
     */
-
+   // GENERO DATOS FICTICIOS COMO LOS RECIBIRÍA NORMALMENTE
    var data = {
     "success":true,
     "terms":"https:\/\/currencylayer.com\/terms",
@@ -275,6 +277,56 @@ function intercambiar()
     }
 }
 
+
+
+
+
+function mostrarAreaVideo(){
+
+  
+    if(contenedorVideo.style.display == "block"){
+      contenedorVideo.style.display = "none"
+    }
+    else{
+      contenedorVideo.style.display = "block"
+    }
+  }
+  
+  
+  
+  
+  function obtenerPosicionDeCambio(){
+      var posicion ;
+      var ultimoCambio = persona.historial.length-1
+      if(persona.historial[ultimoCambio].posicion === 2 ) {
+          posicion = 2
+      }else {
+          posicion = 1
+      }
+      return posicion
+  }
+  
+  
+  
+  
+  function cargarMontoCambio(){
+  
+      var ultimoCambio = persona.historial.length-1
+  
+     if( posicionDeCambio === 1 ){
+          var userEnvia = persona.historial[ultimoCambio].enviaArs
+          var userRecibe =persona.historial[ultimoCambio].recibeUSD
+          cajainfo.innerHTML = "Deberás enviar: "+ userEnvia + " Pesos</br>Recibirás: " + userRecibe + " Dólares"
+     }
+     if(posicionDeCambio === 2 ) {
+          var userEnvia = persona.historial[ultimoCambio].enviaUSD
+          var userRecibe =persona.historial[ultimoCambio].recibeARS
+          cajainfo.innerHTML = "Deberás enviar: "+ userEnvia + " Dólares</br>Recibirás: " + userRecibe + " Pesos"
+     }
+  
+  }
+  
+  
 
 
 //FUNCIONES JQUERY
