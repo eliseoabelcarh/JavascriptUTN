@@ -9,10 +9,43 @@ function crearUsuario(){
 
     var persona = {
         username : _username,
-        password : _password
+        password : _password,
+        historial : []
     }
 
+//guardamos ese usuario en localstorage
+guadarPersonaStorage(persona)
+    
+
     return (persona)
+}
+
+function guadarPersonaStorage(_persona){
+    //recibo un objeto persona
+    localStorage.setItem("persona", JSON.stringify(_persona) )
+
+}
+
+function obtenerPersonaStorage(){
+
+try {
+    var info = JSON.parse(localStorage.getItem("persona"))
+    //devuelve un objeto persona
+    console.log(info)
+    console.log("nombre de persona es "+info.username)
+    //localStorage.clear()
+    //devuelve un objeto persona
+        return info
+    
+} catch (error) {
+    alert("hubo algún error volveremos a empezar")
+    setTimeout(redireccionarHome, 100)
+    
+    
+}
+   
+
+
 }
 
 function mostrarInfoAcceso(persona){
@@ -21,6 +54,9 @@ function mostrarInfoAcceso(persona){
 }
 
 
+function activarFormulario(){
+    botonLogin.addEventListener("click", validarIngreso)
+}
 
 function validarIngreso(){
     var datoUsername = document.getElementById("login-name").value
@@ -72,9 +108,21 @@ function redireccionar(){
      var nombre = persona.username
      
 
-   location.replace("dashboard.html?data=%7B%22username%22:%22"+nombre+"%22%7D")
+   location.replace("calculadora.html?data=%7B%22username%22:%22"+nombre+"%22%7D")
 
 }
+
+function redireccionarHome(){
+    
+  location.replace("index.html")
+
+}
+function redireccionarDashboard(){
+    
+    location.replace("dashboard.html")
+  
+  }
+
 
 function mostrarMensajeError(){
     var cajaMensaje = document.getElementById("caja-mensaje")
@@ -155,7 +203,7 @@ function mostrarPrecioCambio(){
 function actualizarValoresDolar(inputDols, inputPesos){
 
     _tipoCambio = this.precioCambio
-    inputDols.value = (parseFloat(inputPesos.value/_tipoCambio)).toFixed(3)
+    inputDols.value = (parseFloat(inputPesos.value/_tipoCambio)).toFixed(2)
    
 }
 
@@ -171,7 +219,7 @@ function actualizarCajas(){
 function actualizarValoresPesos(inputDols, inputPesos){
 
     _tipoCambio = this.precioCambio
-    inputPesos.value = (parseFloat(inputDols.value*_tipoCambio)).toFixed(3)
+    inputPesos.value = (parseFloat(inputDols.value*_tipoCambio)).toFixed(2)
    
 }
 
@@ -182,6 +230,9 @@ function actualizarCajas2(){
     
 }
 
+function agregarElementoEnArray(array, elemento){
+    array.push(elemento)
+}
 
 function intercambiar()
 {
@@ -205,3 +256,21 @@ function intercambiar()
         posicionDivs = 1;
     }
 }
+
+
+
+//FUNCIONES JQUERY
+
+
+function mostrarCajaInfo(){
+    $("#caja-info").show(1500)
+ }
+
+ function mostrarPopup(){
+     $("#popup").show("fast")
+
+ }
+
+ function cerrarPopup(){
+     $("#popup").hide("slow")
+ }

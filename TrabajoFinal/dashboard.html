@@ -14,44 +14,174 @@
     <title>Probando</title>
 
 </head>
-    <body>
+    <body id = "dashbody">
+  
+      
+      <div class="contenedor">
+        <div class="login-screen" >
+                
+                
+                
+          <div class="app-title">
+            <h1>Cambiando Dólares</h1>
+            <h5>Confirmación</h5>
+          </div>
+
+          <div id= "caja-info">INFO de cambio
+          </div>
     
-        <nav>
-            <a href="#first"><i class="far fa-user"></i></a>
-            <a href="#second"><i class="fas fa-briefcase"></i></a>
-            <a href="#third"><i class="far fa-file"></i></a>
-            <a href="#fourth"><i class="far fa-address-card"></i></a>
-          </nav>
-           
-         <div class= 'container'> 
-           <section id= 'first'>
-             <h1>First</h1>
-           </section>
-           
-           <section id= 'second'>
-             <h1>Second</h1>
-           </section>
-           
-          <section id= 'third'>
-            <h1>Third</h1>
-           </section>
-           
-          <section id= 'fourth'>
-            <h1>Fourth</h1>
-           </section>
-         </div>
+          <form  class="check-form">
 
 
+            <div class="control-group">
+              <div id = "contenedor-labels">
+                <label  for="login-name">Ingrese Nro de Operación de Pago realizado:</label>
+              </div>
+                   
+              <input type="text" value="" placeholder="Código Comprobante 5 dígitos" id="codigocomprobante"
+              required pattern="[A-Za-z0-9]+" maxlength="5" minlength="5"
+              >
+              
+            </div>
+
+
+
+            
     
-    <body>
-	
-   
-	<script src="funciones.js" ></script>
-	<script src="dashboard.js" ></script>
-		
-</body>
+
+            <div class="control-group" id = "checkBoxArea">
+                          
+              <fieldset>
+                <div id = "contenedor-labels">
+                <label  for="job">Elija la cuenta donde recibirá los fondos:</label>
+                </div>
+                
+
+                <select id="cuentas" >
+                  <optgroup label="Pesos">
+                    <option value="">Cta. Ahorros Santander 21-551/0255</option>
+                  </optgroup>
+                  <optgroup label="Dólares">
+                    <option value="">Cta. Ahorros Galicia 401-251/222</option>
+                  </optgroup>
+                </select>
+
+
+
+              <div id= "contenedor-verificacion">
+
+                  <div>
+                    <button id = "botonVerificar"  type="button" >Verificar identidad</button>
+                  </div>
+
+
+                  
+
+                   <div class="control-group"  id = "contenedor-Video">
+                    
+
+
+
+                    <p>Instrucciones:               </p>
+                    <br>
+                    
+
+
+                   
+                   <div class="left">
+                     <div id="startButton" class="button">
+                       Empezar a Grabar
+                     </div>
+                     <h2>Vista Previa</h2>
+                     <video id="preview"  width="250" height="170" autoplay muted></video>
+                   </div>
+                   <div class="right">
+                     <div id="stopButton" class="button">
+                       Stop
+                     </div>
+                     <h2>Grabación:</h2>
+                     <video id="recording" width="250" height="170" controls></video>
+                     <a id="downloadButton" class="button">
+                       Download
+                     </a>
+                   </div>
+                   <div class="bottom">
+                     <pre id="log"></pre>
+                   </div>
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
     
-   
+    
+              </div>
+
+
+
+
+
+
+                <div id = "contenedor-labels">
+                  <div id= "check-container">
+
+                    <input id = "cajitacheck"  type="checkbox" value="" required><label class="light" for="development">Acepto Términos y Condiciones</label><br>
+                
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+            
+
+            
+
+
+
+
+            <div>
+
+              <button id = "botonLogin" class="btn " type="submit" >Enviar Solicitud</button>
+            </div>
+            
+
+
+
+            
+
+
+
+            <div id = "caja-mensaje" style = "display : none" >
+                <div id = "mensaje"></div>
+                    
+            </div>
+
+
+
+
+
+          </form>
+        </div>
+      </div>
+       
+
+      <script src="funciones.js" ></script>
+      <script src="videoRecorder.js" ></script>
+      <script src="dashboard.js" ></script>
+        
+    
     
 </body>
 </html>

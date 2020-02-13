@@ -1,9 +1,4 @@
 
-//-------------------------------------jquery 
-$(document).ready(function(){
-   //alert("sddsadadsd")
-});
-
 
 
 
@@ -14,40 +9,40 @@ $(document).ready(function(){
 var intentos = 0;
 
 var botonLogin = document.getElementById("botonLogin")
-
-var evento = botonLogin.addEventListener("click", validarIngreso)
+var passwordInput = document.getElementById("login-pass")
 
 
 //PROGRAMA ANDANDO
 
 var persona = crearUsuario()
 mostrarInfoAcceso(persona)
+activarFormulario()
 
 
 
 
+//-------------------------------------jquery 
+
+$(document).ready(function(){
+   
+
+ 
+
+   mostrarCajaInfo()
+   
+ 
+   
+
+   
+});
+
+var cajainfo = $("#caja-info")
 
 
+$(".login-link").click(mostrarPopup)
+$("#cerrarPopup").click(cerrarPopup)
+$("#popup").click(cerrarPopup)
 
-/*
-------------------- PROGRAMA ESQUEMA---------------------
-crearUsuario()
-mostrarInfoAcceso()
-
-*****wait for action LOGIN BUTTON
-
-var coinciden = validarLogin(username,password)
-if(coinciden){
-   redireccionar(username)
-}else {
-   mostrarError()
-   reiniciarPagina()
-}
+$("#contenidoPopup").html("usuario: " + persona.username + "</br>password: " + persona.password)
 
 
-
-
-
-
-
-*/
