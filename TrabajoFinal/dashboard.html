@@ -62,7 +62,7 @@
               </div>
                    
               <input type="text" value="" placeholder="Código Comprobante 5 dígitos" id="codigocomprobante"
-              required pattern="[A-Za-z0-9]+" maxlength="5" minlength="5"
+              maxlength="4" min="4"
               >
               
             </div>
@@ -81,11 +81,12 @@
                 
 
                 <select id="cuentas" >
+                  <option value="vacio">Elige cuenta</option>
                   <optgroup label="Pesos">
-                    <option value="">Cta. Ahorros Santander 21-551/0255</option>
+                    <option value="Pesos">Cta. Ahorros Santander 21-551/0255</option>
                   </optgroup>
                   <optgroup label="Dólares">
-                    <option value="">Cta. Ahorros Galicia 401-251/222</option>
+                    <option value="Dolares">Cta. Ahorros Galicia 401-251/222</option>
                   </optgroup>
                 </select>
 
@@ -160,7 +161,7 @@
                 <div id = "contenedor-labels">
                   <div id= "check-container">
 
-                    <input id = "cajitacheck"  type="checkbox" value="" required><label class="light" for="development">Acepto Términos y Condiciones</label><br>
+                    <input id = "cajitacheck"  type="checkbox"  ><label class="light" for="development">Acepto Términos y Condiciones</label><br>
                 
                   </div>
                 </div>

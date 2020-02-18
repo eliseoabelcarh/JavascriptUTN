@@ -259,6 +259,7 @@ function intercambiar()
 
     if(posicionDivs ===1)
     {
+        
         contenedorCalculadora.appendChild(vosenvias)
         contenedorCalculadora.appendChild(contenedor2)
         contenedorCalculadora.appendChild(rueda)
@@ -268,6 +269,7 @@ function intercambiar()
     }
     else
     {
+        
         contenedorCalculadora.appendChild(vosenvias)
         contenedorCalculadora.appendChild(contenedor1)
         contenedorCalculadora.appendChild(rueda)
