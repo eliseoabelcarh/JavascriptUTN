@@ -1,0 +1,270 @@
+*{
+    vertical-align: middle;
+	
+	
+	outline: 0;
+	padding: 0;
+    margin: 0;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+
+
+#menu {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    z-index: 99999999;
+    border-bottom: 2px solid black;
+      
+    
+}
+#mascaraMenu{
+    width: 100%;
+    height: 80px;
+    background-color: wheat;
+}
+#logo {
+
+    background-color: white;
+    width: 200px;
+    height: 80px;
+    float: left;
+    margin-right: 20px;
+    padding: 15px 0 0 15px ;
+    border-bottom: 2px solid black;
+
+}
+nav ul li {
+    background-color: teal;
+    float: left;
+    list-style:none;
+    margin: 30px 0 0 0;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    background-color: white;
+    padding: 20px 30px 20px 30px;
+    margin : 0 0 20px -2px;
+    border: 2px solid  black;
+    color: black;
+}
+nav ul li a:hover{
+    
+    background-color: black;
+    color: white;
+    
+}
+
+
+
+#searchCont{
+    width: 120px;
+    height: 70%;
+    background-color: mistyrose;
+    float: right;
+    margin: 13px 20px 0 0 ;
+    
+}
+
+#contenedor{
+    background-color: rgb(97, 166, 212);
+    width: 100%;
+    
+    
+    
+    
+}
+#sliderContainer{
+    background-color: lemonchiffon;
+    width: 100%;
+    
+        
+}
+
+#sliders{
+    width: 100%;
+    height: 100% ;
+    top: 0;
+    background-color: teal;
+    
+}
+
+#mediumCont {
+    width: 100%;
+    background-color: orangered;
+    
+
+}
+#blocksCont{
+    width: 100%;
+    height: 180px;
+    
+    background-color: plum;
+}
+#block1{
+    width: 33.3%;
+    height: 180px;
+    background-color: peru;
+    float: left;
+    padding: 25px;
+}
+#block2{
+    width: 33.3%;
+    height: 180px;
+    background-color: purple;
+    float: left;
+    padding: 25px;
+}
+#block3{
+    width: 33.39%;
+    height: 180px;
+    background-color: salmon;
+    float: left;
+    padding: 25px;
+
+}
+#footerCont {
+    background-color: rgb(59, 56, 59);
+    width: 100%;
+    height: 200px;
+    
+   
+}
+#footer {
+    background-color: rgb(59, 56, 59);
+    width: 500px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    
+}
+#contactContainer{
+    width: 100%;
+   
+    background-color: white;
+    
+}
+#formulario{
+    background-color: white;
+    width: 50%;
+    height: 370px;
+    display: inline-flex;
+    
+}
+#notasCont{
+    background-color: white;
+    width: 49%;
+    height: 100%;
+    display: inline-flex;
+    right: 0;
+    padding: 5px;
+    border: 1px solid black;
+    
+    
+}
+
+#textContainer{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 20px 40px 20px 30px;
+}
+p{
+    font-size: 1.2em;
+    
+}
+#form1{
+    
+    padding: 40px 20px 30px 40px;
+    background-color: white;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.dataFormCont{
+    margin: 25px;
+}
+#submitBtn{
+    background:black;
+    border-radius: 4px;
+    padding: 5px 19px 5px 19px;
+    
+    border-style: solid;
+    color: white;
+
+}
+#submitBtn:hover{
+    background:rgb(65, 65, 65);
+}
+#submitBtn:active{
+    background:rgb(121, 121, 121);
+}
+
+
+
+#borrarBtn{
+    background:black;
+    border-radius: 4px;
+    padding: 5px 19px 5px 19px;
+    color: white;
+    border-style: solid;
+
+}
+#borrarBtn:hover{
+    background:rgb(65, 65, 65);
+}
+#borrarBtn:active{
+    background:rgb(121, 121, 121);
+}
+
+
+
+
+
+.mySlides {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+
+
+
+.slideshow-container {
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
