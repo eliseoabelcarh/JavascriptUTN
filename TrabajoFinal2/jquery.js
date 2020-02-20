@@ -8,6 +8,6 @@ $(document).ready(function(){
     $("#block3").css('backgroundImage','url(img/banner3.jpg)');
     $("#block3").html('<h2>banner3</h2>');
     
- 
+    $("#searchCont").html('Eliseo Carhuanca')
  
  });
