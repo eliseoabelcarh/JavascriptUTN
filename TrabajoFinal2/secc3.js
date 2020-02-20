@@ -133,7 +133,7 @@ function escribir(){
 
     var data = JSON.parse(localStorage.getItem("persona"))
 
-    if(data != null){
+    if(data.username != null){
 
         var i = 0;
     var notasCont = document.getElementById("notas")
