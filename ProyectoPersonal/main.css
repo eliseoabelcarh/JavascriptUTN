@@ -127,6 +127,19 @@ position: absolute;
   height: 100%;
 }
 
+
+.scrollCont{
+  height: 70%;
+  overflow: auto;
+  text-align: center;
+  margin: 40% 0 40% 0 ;
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+
 #dishesImages{
   float: left;
   background-color: orchid;
@@ -203,17 +216,20 @@ position: absolute;
   background-color: wheat;
 }
 
-#plate1img {
+#plate1img , .plate1img {
   width: 100%;
   height: 100%;
-  background: hsla(345, 98%, 53%, 0.2) url("images/plate1.png") no-repeat center top;
+  
   background-size: 100% 100%;
   position: absolute;
 }
-#plate2img {
+
+
+
+#plate2img , .plate2img{
   width: 100%;
   height: 100%;
-  background: hsla(71, 100%, 51%, 0.2) url("images/plate2.png") no-repeat center top;
+  
   background-size: 100% 100%;
   position: absolute;
 }
@@ -267,4 +283,13 @@ position: absolute;
   height: 15%;
   width: 100%;
   background-color: slateblue;
+}
+
+.contNamePlate {
+  background-color: coral;
+  padding: 20px;
+}
+.contDescriptionPlate{
+  background-color: cornflowerblue;
+  padding: 20px;
 }
