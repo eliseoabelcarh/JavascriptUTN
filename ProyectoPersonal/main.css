@@ -112,6 +112,27 @@ position: absolute;
   background-color: tan;
 }
 
+#subtotalDesc{
+  width: 40%;
+  height: 100%;
+  float: left;
+  background-color: blanchedalmond;
+}
+#singlePrice{
+  width: 80%;
+  height: 80%;
+  float: right;
+  background-color: salmon;
+  
+}
+
+#singlePriceCont{
+  width: 60%;
+  height: 100%;
+  float: right;
+  background-color: chartreuse;
+}
+
 #buttonAddOrder {
   width: 100%;
   height: 69%;
@@ -135,7 +156,7 @@ position: absolute;
   margin: 40% 0 40% 0 ;
   
 }
-::-webkit-scrollbar{
+.scrollCont::-webkit-scrollbar{
   display: none;
 }
 
@@ -184,7 +205,7 @@ position: absolute;
 #chopsticks{
   width: 100%;
   height: 65%;
-  background: hsla(259, 98%, 48%, 0.2) url("images/chopstick.png") no-repeat center top;
+  
   background-size: 100% 100%;
   position: absolute;
 }
@@ -195,6 +216,18 @@ position: absolute;
   background-color:hsla(0, 14%, 12%, 0.7);
   position: absolute;
   bottom: 0;
+}
+
+.sauceClass{
+  float: left;
+  width: 33%;
+  height: 100%;
+  background-color: chocolate;
+}
+
+.sauceImage{
+  width: 100%;
+  height: 100%;
 }
 
 #sauce1{
@@ -242,6 +275,16 @@ position: absolute;
   bottom: 0;
   left: 0;
 }
+.wontonImage{
+  width: 100%;
+  height: 100%;
+}
+
+.chopstickImage{
+  width: 100%;
+  height: 100%;
+}
+
 #rightColumnMenu {
   float: left;
   background-color: olivedrab;
@@ -267,11 +310,15 @@ position: absolute;
 
 
 #ordersContainer{
+  overflow-y: auto;
+  overflow-x: hidden;
+
   height: 49%;
   width: 100%;
   background-color: plum;
   
 }
+
 
 #totalPriceContainer{
   height: 5%;
@@ -287,9 +334,38 @@ position: absolute;
 
 .contNamePlate {
   background-color: coral;
-  padding: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
 }
 .contDescriptionPlate{
   background-color: cornflowerblue;
-  padding: 20px;
+  padding: 5px;
+}
+.drinkImage {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.orderCss{
+  margin: 4px 4px 4px 4px;
+  background-color: yellow;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#totalDesc{
+  width: 50%;
+  background-color: skyblue;
+  float: left;
+  height: 99%;
+  
+}
+#totalPrice{
+  width: 50%;
+  background-color: tan;
+  float: right;
+  height: 99%;
 }

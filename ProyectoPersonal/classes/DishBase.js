@@ -1,16 +1,10 @@
 class DishBase {
 
     constructor( ){
-        //this.dishElement = element;
+        
         this.plate = new Plate();
         
-        this.chopstick = true;
-        this.sauce1 = true;
-        this.sauce2 = false;
-        this.sauce3 = false;
-        this.wonton = true;
-        //this.price = this.plate1.getPrice() + this.plate2.getPrice()
-
+       
     }
 
     cargarPlato(plate){

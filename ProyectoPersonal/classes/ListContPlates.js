@@ -36,12 +36,7 @@ class ListContPlates {
         
         div.addEventListener("click", function(){
             //console.log(div.id)
-            // si descattivado mostra desripcion si no descativar descripcion
-            
-                //descativo el resto y pongo false
-                //console.log(_plate.getName())
-                //console.log(document.getElementsByClassName("contNamePlate"))
-                
+                           
                    
                     var arrayPlates = document.getElementsByClassName("contNamePlate")
                     for(var obj of arrayPlates ){
@@ -77,7 +72,7 @@ class ListContPlates {
                     DishBase.setPlateUno(_plate)
                     dishBase1.cargarPlato(_plate)
                     this.dishBaseUno = dishBase1;
-                    console.log(this.dishBaseUno)
+                    //console.log(this.dishBaseUno)
                     localStorage.setItem("dishBase1" ,JSON.stringify(dishBase1) );
 
                   }
@@ -85,16 +80,18 @@ class ListContPlates {
                     DishBase.setPlateDos(_plate)
                     dishBase2.cargarPlato(_plate)
                     this.dishBaseDos = dishBase2;
-                    console.log(this.dishBaseDos)
+                    //console.log(this.dishBaseDos)
                     localStorage.setItem("dishBase2" ,JSON.stringify(dishBase2) );
                   }  
                  
                 
                   
-            
+                  SinglePrice.updatePrice()
         }
         )
         
+        
+
         return div;
 
     }

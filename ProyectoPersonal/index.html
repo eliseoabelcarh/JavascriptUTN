@@ -93,66 +93,103 @@
 
             <div id = "footerContainer">
 
-                <div id = "extrasContainer">
+                <form id = "form1" action="">
 
-                    <div id = "sauces">
+                        <div id = "extrasContainer">
 
-                    </div>
+                            <div id = "sauces">
 
-                    <div id = "additionals">
+                                
 
-                    </div>
+                            </div>
 
-                    <div id = "drinks">
+                            <div id = "additionals">
 
-                    </div>
+                               
 
-                    <div id = "drinkImage">
+                            </div>
 
-                    </div>
+                            <div id = "drinks">
 
-                </div>
-                <div id = "dishPriceContainer">
+                                
 
-                    <div id = "priceOrder">
+                            </div>
 
-                    </div>   
-                    <div id = "buttonAddOrder">
-                        
-                    </div>        
+                            <div id = "drinkImage">
 
-                </div>
+                            </div>
+
+                        </div>
+                        <div id = "dishPriceContainer">
+
+                            <div id = "priceOrder">
+
+                                <div id = "subtotalDesc">
+                                        Precio Plato:
+                                </div>
+                                <div id = "singlePriceCont">
+                                    <div id = "singlePrice">
+
+                                    </div>
+                                </div>
+                                
+
+                            </div>   
+                            <div id = "buttonSingleOrder">
+
+                                <input id = "buttonAddSingleOrder" type="button" value="ADD TO CART" />
+                                
+                            </div>        
+
+                        </div>
+
+                </form>        
 
             </div>
 
         </div>
 
        
+        <form id = "form2" action="">
 
-        <div id = "cartContainer">
+            <div id = "cartContainer">
 
-            <div id = "logo">
+                <div id = "logo">
+
+                </div>
+
+                <div id = "formContainer">
+
+                    <input id = "nameForm" type="text" placeholder="Nombre">
+                    <input id = "nameForm" type="number" placeholder="Teléfono">
+
+                </div>
+
+                <div id = "ordersContainer">
+
+                </div>
+
+                <div id = "totalPriceContainer">
+
+                    <div id ="totalDesc" >
+                        Total:
+
+                    </div>
+                    <div id ="totalPrice" >
+
+                    </div>
+
+                </div>
+
+                <div id = "checkoutButtonContainer">
+                    <input type="button" value="ORDER NOW">
+
+                </div>
+
 
             </div>
 
-            <div id = "formContainer">
-
-            </div>
-
-            <div id = "ordersContainer">
-
-            </div>
-
-            <div id = "totalPriceContainer">
-
-            </div>
-
-            <div id = "checkoutButtonContainer">
-
-            </div>
-
-
-        </div>
+        </form>
 
 
     </div>
@@ -166,6 +203,14 @@
     <script src="classes/DishBase.js" ></script>  
     <script src="classes/Plate.js" ></script>  
     <script src="classes/ListContPlates.js" ></script>  
+    <script src="classes/ListContAdditionals.js" ></script>  
+    <script src="classes/Sauce.js" ></script>  
+    <script src="classes/Additional.js" ></script>
+    <script src="classes/DrinkContainer.js" ></script>
+    <script src="classes/Drink.js" ></script>
+    <script src="classes/SinglePrice.js" ></script>
+    <script src="classes/SingleOrder.js" ></script>
+    <script src="classes/TotalPrice.js" ></script>
 
 
     <script src="index.js" ></script> 
