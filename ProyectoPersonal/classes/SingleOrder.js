@@ -25,7 +25,7 @@ class SingleOrder{
         cont++;
 
         var orderName = "order" + cont
-        //console.log("ge" + JSON.stringify(this))
+        
         localStorage.setItem(orderName.normalize() ,JSON.stringify(this));
 
         var div = document.createElement("div")

@@ -2,6 +2,7 @@ window.onload = function(){
     
     removeSingleOrderStorage()
     refreshData()
+    //Form.valid()
 
     localStorage.removeItem("order1")
     localStorage.removeItem("order2")
@@ -30,11 +31,13 @@ function removeSingleOrderStorage(){
     //localStorage.clear()
 }
 
-var cont = 0;
+//var cont = 0;
 
 var  submitBtnSingleOrder = document.getElementById("buttonAddSingleOrder")
-
 submitBtnSingleOrder.addEventListener("click", addSingleOrder)
+
+var  submitBtnTotalOrder = document.getElementById("buttonAddTotalOrder")
+submitBtnTotalOrder.addEventListener("click", addTotalOrder)
 
 function addSingleOrder(event){
 
@@ -47,55 +50,99 @@ function addSingleOrder(event){
 
     else{
     
-    var singleOrder = {
-        dishBase1:{},
-        dishBase2:{},
-        drink:{}
-    }
-
-    var dish1 = JSON.parse(localStorage.getItem("dishBase1"));
-    var dish2 = JSON.parse(localStorage.getItem("dishBase2"));
-
-    if(dish1 || dish2 ){
-        singleOrder.dishBase1 = dish1;
-        singleOrder.dishBase2 = dish2;
-    }
-
-
-
-
-
-    var form1inputs = document.getElementById("form1").elements;
-    
-    for(var input of form1inputs){
-        if(input.type == "checkbox"  ){
-            var id = input.id
-            var elem = document.getElementById(id)
-            localStorage.setItem(id , elem.checked )
-            singleOrder[id.normalize()] = elem.checked
-            
-            //var text = elem.labels[0].outerText
-        }
-        if(input.type == "select-one"  ){
-            var id = input.id
-            var elem = document.getElementById(id)
-            var drinkSelected = JSON.parse(localStorage.getItem("drinkContainer1"))
-            singleOrder.drink = drinkSelected;
-            
+        var singleOrder = {
+            dishBase1:{},
+            dishBase2:{},
+            drink:{}
         }
 
+        var dish1 = JSON.parse(localStorage.getItem("dishBase1"));
+        var dish2 = JSON.parse(localStorage.getItem("dishBase2"));
+
+        if(dish1 || dish2 ){
+            singleOrder.dishBase1 = dish1;
+            singleOrder.dishBase2 = dish2;
+        }
+
+        var form1inputs = document.getElementById("form1").elements;
         
+        for(var input of form1inputs){
+            if(input.type == "checkbox"  ){
+                var id = input.id
+                var elem = document.getElementById(id)
+                localStorage.setItem(id , elem.checked )
+                singleOrder[id.normalize()] = elem.checked
+                
+                //var text = elem.labels[0].outerText
+            }
+            if(input.type == "select-one"  ){
+                var id = input.id
+                var elem = document.getElementById(id)
+                var drinkSelected = JSON.parse(localStorage.getItem("drinkContainer1"))
+                singleOrder.drink = drinkSelected;
+                
+            }
+            
+        }
         
-    }
-    
-    var order = new SingleOrder(singleOrder)
-    order.createDiv()
-    
-    refreshData()
-    return singleOrder
+        var order = new SingleOrder(singleOrder)
+        order.createDiv()
+        
+        refreshData()
+        return singleOrder
 
     }
 }
+
+
+
+function addTotalOrder(){
+
+    var ordersContainer = document.getElementById("ordersContainer")
+    if(! ordersContainer.childElementCount){
+        alert("debes incluir algún pedido")
+    } else{
+        //sigue acá si existen pedidos
+        
+        //busco todas las orders si existen en storage
+
+        var objectTotalOrders = {
+            name:"",phone:0, table:0,
+            order1:{},order2:{},order3:{}, order4:{}, order5:{}, order6:{},order7:{}, order8:{}, order9:{}
+        }
+
+        var ordersContainer = document.getElementById("ordersContainer");
+        var cont = ordersContainer.childElementCount
+
+        var i = 1;
+
+        while(i<=cont){
+
+            var orderNumber = "order" + i
+            var orderSearched = JSON.parse(localStorage.getItem(orderNumber))
+            objectTotalOrders[orderNumber.normalize()]=orderSearched
+
+            i++
+        }
+        
+                
+
+
+        console.log(objectTotalOrders)
+        //creo un object con toddo el pedido y escribo un html en forma de json
+
+        var result = Form.valid()
+        console.log(result)
+        
+
+
+    }
+
+
+}
+
+
+
 
 
 
