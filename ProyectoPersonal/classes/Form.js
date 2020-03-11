@@ -4,22 +4,29 @@ class Form{
     }
 
     static valid(){
-        var result= false;
+        var datos= {
+            name:"",phone:0,table:0
+        };
 
 
         var name = document.getElementById("nameForm");
+        var phone = document.getElementById("phoneForm");
+        var table = document.getElementById("tableForm");
         
         if(name.value == ""){
-            console.log("esta vacío")
+            
             name.setCustomValidity("escribe algo")
+            
         }else{
             name.setCustomValidity("")
-            result = true;
+            datos.name = name.value;
+            datos.phone = phone.value;
+            datos.table = table.value;
+            
         }
-        
 
-
-        return result;
+    
+        return datos;
     }
     
 }

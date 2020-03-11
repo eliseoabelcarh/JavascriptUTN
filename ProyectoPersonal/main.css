@@ -2,11 +2,14 @@
 *{
   margin:0;
   padding : 0;
+  font-family: 'Mukta', sans-serif;
+  
 
 }
 
 #webContainer {
-  background-color: gray;
+  background-color: #d6dee5;
+  
   position: absolute;
   width: 100%;
   height:100%;
@@ -15,22 +18,23 @@
 #cartContainer{
   width: 20%;
   height: 100%;
-  background-color: honeydew;
+  background-color: #d6dee5;
   position: absolute;
   right: 0;
-
+ text-align: center;
 }
 
 #menuContainer{
   width: 79%;
   height: 100%;
-  background-color: lavender;
+  background-color: #d6dee5;
   position: absolute;
+  /*border-right: 1px solid rgb(182, 182, 182);*/
 }
 
 #dishesContainer{
   width: 100%;
-  background-color: lemonchiffon;
+  /*background-color: #d6dee5;*/
   position: absolute;
   width: 100%;
   height:69%;
@@ -39,7 +43,7 @@
 }
 
 #footerContainer{
-  background-color: khaki;
+  /*background-color: khaki;*/
   position: absolute;
   
   width: 100%;
@@ -53,49 +57,73 @@
 #extrasContainer{
 
 width: 69%;
-height: 100%;
-background-color:lightseagreen;
+height: 90%;
+/*background-color:lightseagreen;*/
 position: absolute;
 
 }
 
 #sauces {
-
-  width:25%;
-  height: 100%;
-  background-color: lavender;
+  width:19%;
+  height: 90%;
+  background-color: white;
   float: left;
+  border-radius: 1em;
+  margin:0 2px 0 2px;
+  padding: 10px 2px 0 10px;
+  
+  font-weight: 400;
+  font-size: small;
 
 }
 
 #additionals{
-  width:25%;
-  height: 100%;
-  background-color: lavenderblush;
+  width:19%;
+  height: 90%;
+  background-color: white;
   float: left;
+  border-radius: 1em;
+  margin:0 2px 0 2px;
+  padding: 10px 2px 0 10px;
+  font-weight: 400;
+  font-size: small;
+  
 }
 
 #drinks{
-  width:25%;
-  height: 100%;
-  background-color: lightblue;
+  width:19%;
+  height: 90%;
+  background-color: white;
   float: left;
+  border-radius: 1em;
+  margin:0 2px 0 2px;
+  padding: 10px 2px 0 10px;
+  
+  font-weight: 400;
+  font-size: small;
 }
 
 #drinkImage{
-  width:25%;
-  height: 100%;
-  background-color: lightskyblue;
+  width:19%;
+  height: 90%;
+  background-color: white;
   float: left;
+  border-radius: 1em;
+  margin:0 2px 0 2px;
+  padding: 10px 2px 0 10px;
+  font-weight: 600;
 }
 
-
+#select-choice1{
+  width: 90%;
+  
+}
 
 
 #dishPriceContainer{
   width: 30%;
   height: 100%;
-  background-color: lightsalmon;
+  /*background-color: lightsalmon;*/
   position: absolute;
   right: 0;
 
@@ -107,45 +135,93 @@ position: absolute;
 
 
 #priceOrder{
-  width: 100%;
+  width: 90%;
   height: 30%;
-  background-color: tan;
+  background-color: white;
+  border: 1px solid rgb(182, 182, 182); 
 }
 
 #subtotalDesc{
-  width: 40%;
+  width: 50%;
   height: 100%;
   float: left;
-  background-color: blanchedalmond;
+  font-weight: 600;
+  font-size: 0.7em;
+  text-align: center;
+  padding-top: 10px;
+  /*background-color: blanchedalmond;*/
 }
 #singlePrice{
-  width: 80%;
+  width: 90%;
   height: 80%;
   float: right;
-  background-color: salmon;
+  padding-top: 9px;
+  /*background-color: salmon;*/
   
 }
 
 #singlePriceCont{
-  width: 60%;
+  width: 50%;
   height: 100%;
   float: right;
-  background-color: chartreuse;
+  /*background-color: chartreuse;*/
 }
 
-#buttonAddOrder {
-  width: 100%;
-  height: 69%;
-  background-color: tomato;
+#buttonSingleOrder{
+  padding: 10px 17px 0 0;
 }
+#buttonAddSingleOrder {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff7978;
+  border:1px solid#f66969 ;
+  cursor: pointer;
+
+}
+#buttonAddSingleOrder:hover{
+  background-color: #f66969;
+}
+#buttonAddSingleOrder:active{
+  background-color: #f66969;
+}
+
+
+
+
+
+
+
+#buttonAddTotalOrder {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff7978;
+  border:1px solid#f66969 ;
+  cursor: pointer;
+
+}
+#buttonAddTotalOrder:hover{
+  background-color: #f66969;
+}
+#buttonAddTotalOrder:active{
+  background-color: #f66969;
+}
+
+
+
 
 
 #leftColumnMenu{
   float: left;
-  background-color: lightskyblue;
+  /*background-color: #c4d4e1;*/
   left: 0;
   width: 20%;
   height: 100%;
+  font-family: 'Mukta', sans-serif;
+  font-weight: bold;
 }
 
 
@@ -156,14 +232,14 @@ position: absolute;
   margin: 40% 0 40% 0 ;
   
 }
-.scrollCont::-webkit-scrollbar{
+.scrollCont::-webkit-scrollbar {
   display: none;
 }
 
 
 #dishesImages{
   float: left;
-  background-color: orchid;
+  background-color: #d6dee5;
   height: 100%;
   width: 59%;
 }
@@ -172,13 +248,14 @@ position: absolute;
 
   height: 99%;
   width: 99%;
-  background-color: yellow;
+  /*background-color: #c4d4e1;*/
 
 }
 
 #dish{
 
-  background: wheat url("images/squareplate.jpg") no-repeat center top;
+  /*background: wheat url("images/squareplate.png") no-repeat center top;*/
+  background-image: url("images/squareplate.png") ;
   background-size: 100% 100%;
   width: 99%;
   height: 99%;
@@ -189,7 +266,7 @@ position: absolute;
 #plate1Container{
   width: 50%;
   height: 99%;
-  background-color: hsla(310, 89%, 47%, 0.2);
+  /*background-color: hsla(310, 89%, 47%, 0.2);*/
   position: absolute;
   float: left;
 }
@@ -197,7 +274,7 @@ position: absolute;
 #plate2Container{
   width: 55%;
   height: 99%;
-  background-color: hsla(81, 86%, 44%, 0.3);
+  /*background-color: hsla(81, 86%, 44%, 0.3);*/
   position: absolute;
   right: 0;
 }
@@ -213,7 +290,7 @@ position: absolute;
 #additionalsContainer{
   width: 100%;
   height: 20%;
-  background-color:hsla(0, 14%, 12%, 0.7);
+  /*background-color:hsla(0, 14%, 12%, 0.7);*/
   position: absolute;
   bottom: 0;
 }
@@ -234,19 +311,19 @@ position: absolute;
   float: left;
   width: 33%;
   height: 100%;
-  background-color: springgreen;
+  /*background-color: springgreen;*/
 }
 #sauce2{
   float: left;
   width: 33%;
   height: 100%;
-  background-color: thistle;
+  /*background-color: thistle;*/
 }
 #sauce3{
   float: left;
   width: 33%;
   height: 100%;
-  background-color: wheat;
+  /*background-color: wheat;*/
 }
 
 #plate1img , .plate1img {
@@ -269,7 +346,7 @@ position: absolute;
 #wontonImg{
   width: 60%;
   height: 20%;
-  background-color: hsla(300, 100%, 50%, 0.7) ;
+ /* background-color: hsla(300, 100%, 50%, 0.7) ;*/
   
   position: absolute;
   bottom: 0;
@@ -287,24 +364,27 @@ position: absolute;
 
 #rightColumnMenu {
   float: left;
-  background-color: olivedrab;
+  /*background-color: #c4d4e1;*/
   right: 0;
   width: 20%;
   height: 100%;
+  font-family: 'Mukta', sans-serif;
+  font-weight: bold;
 }
 
 #logo{
 
   height: 15%;
   width: 100%;
-  background-color: palegreen;
+  /*background-color: palegreen;*/
 
 }
 
 #formContainer{
-  height: 15%;
+  height: auto;
   width: 100%;
-  background-color: palevioletred;
+  text-align: left;
+  /*background-color: palevioletred;*/
 
 }
 
@@ -313,34 +393,45 @@ position: absolute;
   overflow-y: auto;
   overflow-x: hidden;
 
-  height: 49%;
-  width: 100%;
-  background-color: plum;
+  height: 40%;
+  width: 90%;
+  background-color: white;
+  border: 1px solid rgb(182, 182, 182);
+  
   
 }
 
 
 #totalPriceContainer{
-  height: 5%;
-  width: 100%;
-  background-color: sandybrown;
+  height: 4%;
+  width: 90%;
+  background-color: white;
+  border: 1px solid  rgb(182, 182, 182); 
+  padding-bottom: 8px;
+  margin: 5px 0 5px 0;
 }
 
 #checkoutButtonContainer{
-  height: 15%;
-  width: 100%;
-  background-color: slateblue;
+  height: 10%;
+  width: 90%;
+  /*background-color: slateblue;*/
 }
 
 .contNamePlate {
-  background-color: coral;
+  background-color: #4c60e0;
   padding: 10px;
+  margin:0.2em 0.5em 0.2em 0.5em;
   cursor: pointer;
-  border: 1px solid black;
+  
+  border-radius: 0.8em;
+  color: white;
+  
 }
 .contDescriptionPlate{
-  background-color: cornflowerblue;
-  padding: 5px;
+  
+  padding: 3px 10px 5px 5px;
+  font-family: 'Mukta', sans-serif;
+  font-weight: 200;
 }
 .drinkImage {
   height: 100%;
@@ -358,14 +449,14 @@ position: absolute;
 
 #totalDesc{
   width: 50%;
-  background-color: skyblue;
+  /*background-color: skyblue;*/
   float: left;
   height: 99%;
   
 }
 #totalPrice{
   width: 50%;
-  background-color: tan;
+  /*background-color: tan;*/
   float: right;
   height: 99%;
 }

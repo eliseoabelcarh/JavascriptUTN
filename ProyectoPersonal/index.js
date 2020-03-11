@@ -99,9 +99,15 @@ function addSingleOrder(event){
 function addTotalOrder(){
 
     var ordersContainer = document.getElementById("ordersContainer")
-    if(! ordersContainer.childElementCount){
+    var datos = Form.valid()
+
+    if(! ordersContainer.childElementCount ){
         alert("debes incluir algún pedido")
-    } else{
+    }else if(datos.name == ""){
+        alert("debes rellenar campo nombre")
+    }
+    
+    else{
         //sigue acá si existen pedidos
         
         //busco todas las orders si existen en storage
@@ -123,16 +129,16 @@ function addTotalOrder(){
             objectTotalOrders[orderNumber.normalize()]=orderSearched
 
             i++
-        }
-        
-                
+        }              
 
+        objectTotalOrders.name = datos.name;
+        objectTotalOrders.phone = datos.phone;
+        objectTotalOrders.table = datos.table;
 
         console.log(objectTotalOrders)
         //creo un object con toddo el pedido y escribo un html en forma de json
 
-        var result = Form.valid()
-        console.log(result)
+        
         
 
 
@@ -148,111 +154,87 @@ function addTotalOrder(){
 
 
 
-var plate1 = new Plate("plato1","desc11111","images/plate1.png",6.5)
-var plate2 = new Plate("plato2","desc2222","images/plate2.png",6.5)
-var plate3 = new Plate("plato3","desc333","images/plate1.png",6.5)
-var plate4 = new Plate("plato4","desc444","images/plate2.png",6.5)
-var plate5 = new Plate("plato5","desc5","images/plate1.png",6.5)
-var plate6 = new Plate("plato6","desc6","images/plate2.png",6.5)
-var plate7 = new Plate("plato7","desc7","images/plate1.png",6.5)
-var plate8 = new Plate("plato8","desc8","images/plate2.png",6.5)
+var plate1 = new Plate("Plato1","descripción de plato","images/plate1.png",6.5)
+var plate2 = new Plate("Plato2","descripción de plato","images/plate2.png",6.5)
+var plate3 = new Plate("Plato3","descripción de plato","images/plate1.png",6.5)
+var plate4 = new Plate("Plato4","descripción de plato","images/plate2.png",6.5)
+var plate5 = new Plate("Plato5","descripción de plato","images/plate1.png",6.5)
+var plate6 = new Plate("Plato6","descripción de plato","images/plate2.png",6.5)
+var plate7 = new Plate("Plato7","descripción de plato","images/plate1.png",6.5)
+var plate8 = new Plate("Plato8","descripción de plato","images/plate2.png",6.5)
+var sauce1 = new Sauce("sauce1", "images/plate1.png");
+var sauce2 = new Sauce("sauce2", "images/plate2.png");
+var sauce3 = new Sauce("sauce3", "images/plate1.png");
+var wonton = new Additional("wontonn", "images/plate1.png");
+var chopstick = new Additional("chopstickk" , "images/chopstick.png");
+var drinkContainer1 = new DrinkContainer ("drinkk1");
+var drink1 = new Drink("drinkicito1" , "images/plate1.png" , 2.5)
+var drink2 = new Drink("drinkicito2" , "images/plate2.png" , 3 )
+var drink3 = new Drink("drinkicito3" , "images/plate1.png" , 4.5 )
+
+
 
 
 function refreshData(){
 
-var imageContPlate1 = document.getElementById("plate1img")
-var imageContPlate2 = document.getElementById("plate2img")
-var imageContWonton = document.getElementById("wontonImg")
-var imageContChopstick = document.getElementById("chopsticks")
-var imageContSauce1 = document.getElementById("sauce1")
-var imageContSauce2 = document.getElementById("sauce2")
-var imageContSauce3 = document.getElementById("sauce3")
-var imageContDrink = document.getElementById("drinkImage")
-var drinksCont = document.getElementById("drinks")
-var additCont = document.getElementById("additionals")
-var saucesCont = document.getElementById("sauces")
+    var imageContPlate1 = document.getElementById("plate1img")
+    var imageContPlate2 = document.getElementById("plate2img")
+    var imageContWonton = document.getElementById("wontonImg")
+    var imageContChopstick = document.getElementById("chopsticks")
+    var imageContSauce1 = document.getElementById("sauce1")
+    var imageContSauce2 = document.getElementById("sauce2")
+    var imageContSauce3 = document.getElementById("sauce3")
+    var imageContDrink = document.getElementById("drinkImage")
+    var drinksCont = document.getElementById("drinks")
+    var additCont = document.getElementById("additionals")
+    var saucesCont = document.getElementById("sauces")
+    var scrollCont1 = document.getElementById("scrollCont1");
+    var scrollCont2 = document.getElementById("scrollCont2");
 
-var singlePriceCont = document.getElementById("singlePrice")
-singlePriceCont.innerText = 0
 
-var dataContainers =[]
-dataContainers.push(imageContPlate1 , imageContPlate2 ,imageContWonton ,imageContChopstick, imageContSauce1, imageContSauce2 ,imageContSauce3 , drinksCont, additCont, saucesCont, imageContDrink )
-for(var container of dataContainers ){
-    while(container.firstChild){
-        container.removeChild(container.firstChild)
+    var singlePriceCont = document.getElementById("singlePrice")
+    singlePriceCont.innerText = 0
+
+    var dataContainers =[]
+    dataContainers.push(imageContPlate1 , imageContPlate2 ,imageContWonton ,imageContChopstick, imageContSauce1, imageContSauce2 ,imageContSauce3 , drinksCont, additCont, saucesCont, imageContDrink )
+    for(var container of dataContainers ){
+        while(container.firstChild){
+            container.removeChild(container.firstChild)
+        }
     }
-}
+
+    //add plates in column 1
+    var listContPlates1 = new ListContPlates(scrollCont1);
+    var listColum1 = []
+    listColum1.push(plate1, plate2, plate3, plate4, plate5, plate6, plate7, plate8)
+    listContPlates1.addListPlates(listColum1)
 
 
-//add plates in column 1
-var scrollCont1 = document.getElementById("scrollCont1");
+    //add plates in column 2
+    var listContPlates2 = new ListContPlates(scrollCont2);
+    var listColum2 = []
+    listColum2.push( plate1, plate2, plate3, plate4, plate5, plate6, plate7, plate8)
+    listContPlates2.addListPlates(listColum2)
 
-var listContPlates1 = new ListContPlates(scrollCont1);
-var listColum1 = []
-listColum1.push(plate1, plate2, plate3, plate4)
-listContPlates1.addListPlates(listColum1)
+    //adding sauces
+    var listSauces = []
+    listSauces.push(sauce1, sauce2, sauce3)
+    var ListContAdditionals1 = new ListContAdditionals();
+    ListContAdditionals1.addAdditionals(listSauces , "sauces" )
 
+    //adding additionals extras  
+    var listAdditionals = []
+    listAdditionals.push(wonton, chopstick)
+    ListContAdditionals1.addAdditionals(listAdditionals , "additionals")
 
-//add plates in column 2
-var scrollCont2 = document.getElementById("scrollCont2");
-var listContPlates2 = new ListContPlates(scrollCont2);
-var listColum2 = []
-listColum2.push( plate5, plate6, plate7, plate8)
-listContPlates2.addListPlates(listColum2)
+    //adding drinksContainer
+    listDrinksContainer =[]
+    listDrinksContainer.push(drinkContainer1)
 
-//adding sauces
-var sauce1 = new Sauce("sauce1" , "images/plate1.png");
-var sauce2 = new Sauce("sauce2", "images/plate2.png");
-var sauce3 = new Sauce("sauce3", "images/plate1.png");
-
-var listSauces = []
-listSauces.push(sauce1, sauce2, sauce3)
-
-var ListContAdditionals1 = new ListContAdditionals();
-
-
-ListContAdditionals1.addAdditionals(listSauces , "sauces" )
-
-//adding additionals extras
-var wonton = new Additional("wontonn", "images/plate1.png");
-var chopstick = new Additional("chopstickk" , "images/chopstick.png");
-
-var listAdditionals = []
-listAdditionals.push(wonton, chopstick)
-
-
-
-ListContAdditionals1.addAdditionals(listAdditionals , "additionals")
-
-//adding drinksContainer
-
-var drinkContainer1 = new DrinkContainer ("drinkk1");
-
-listDrinksContainer =[]
-listDrinksContainer.push(drinkContainer1)
-
-//adding drinks to listDrinksContainer
-var drink1 = new Drink("drinkicito1" , "images/plate1.png" , 2.5)
-var drink2 = new Drink("drinkicito2" , "images/plate2.png" , 3 )
-var drink3 = new Drink("drinkicito3" , "images/plate1.png" , 4.5 )
-var listDrinks = []
-listDrinks.push(drink1, drink2, drink3)
-
-
-
-
-ListContAdditionals1.addAdditionals(listDrinksContainer , "drinks" ,listDrinks )
-
-
-
-
-
-
-
-
-
-
-
+    //adding drinks to listDrinksContainer
+    var listDrinks = []
+    listDrinks.push(drink1, drink2, drink3)
+    ListContAdditionals1.addAdditionals(listDrinksContainer , "drinks" ,listDrinks )
 
 
 }
