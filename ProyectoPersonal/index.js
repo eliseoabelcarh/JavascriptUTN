@@ -162,15 +162,15 @@ var plate5 = new Plate("Plato5","descripción de plato","images/plate1.png",6.5)
 var plate6 = new Plate("Plato6","descripción de plato","images/plate2.png",6.5)
 var plate7 = new Plate("Plato7","descripción de plato","images/plate1.png",6.5)
 var plate8 = new Plate("Plato8","descripción de plato","images/plate2.png",6.5)
-var sauce1 = new Sauce("sauce1", "images/plate1.png");
-var sauce2 = new Sauce("sauce2", "images/plate2.png");
-var sauce3 = new Sauce("sauce3", "images/plate1.png");
-var wonton = new Additional("wontonn", "images/plate1.png");
+var sauce1 = new Sauce("sauce1", "images/sauce1.png");
+var sauce2 = new Sauce("sauce2", "images/sauce2.png");
+var sauce3 = new Sauce("sauce3", "images/sauce3.png");
+var wonton = new Additional("wontonn", "images/wonton.png");
 var chopstick = new Additional("chopstickk" , "images/chopstick.png");
 var drinkContainer1 = new DrinkContainer ("drinkk1");
-var drink1 = new Drink("drinkicito1" , "images/plate1.png" , 2.5)
-var drink2 = new Drink("drinkicito2" , "images/plate2.png" , 3 )
-var drink3 = new Drink("drinkicito3" , "images/plate1.png" , 4.5 )
+var drink1 = new Drink("drinkicito1" , "images/drink1.png" , 2.5)
+var drink2 = new Drink("drinkicito2" , "images/drink2.png" , 3 )
+var drink3 = new Drink("drinkicito3" , "images/drink3.png" , 4.5 )
 
 
 
