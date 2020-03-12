@@ -7,8 +7,9 @@ class ListContAdditionals {
 
     static createCheckBoxDiv( labelName , id ){
         var div = document.createElement("div")
+        div.className="inputCheckboxCont"
         var checkName = "checkbox" + id;
-        div.innerHTML = '<label for="'+ checkName + '">'+ labelName +'</label><input type="checkbox" name="'+ checkName+ '" id="'+  checkName+ '" />'
+        div.innerHTML = '<input type="checkbox" name="'+ checkName+ '" id="'+  checkName+ '" /><label for="'+ checkName + '">'+ labelName +'</label>'
         return div;
     }
 
@@ -176,6 +177,7 @@ class ListContAdditionals {
     static createSelectChoiceDiv(labelName, id , arrayDrinks){
         var div = document.createElement("div");
         var divName = "select-choice"  + id;
+       
 
         //show image for selected option drink
         div.addEventListener('change', (event) => {

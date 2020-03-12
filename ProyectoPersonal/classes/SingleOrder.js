@@ -80,7 +80,8 @@ class SingleOrder{
 
         //creating remove div btn
         var removeBtn = document.createElement("button")
-        removeBtn.textContent = "remove me"
+        removeBtn.textContent = "X"
+        removeBtn.className="removeBtn"
         removeBtn.addEventListener("click", function(){
             div.parentElement.removeChild(div)        
             localStorage.removeItem(orderName.normalize())

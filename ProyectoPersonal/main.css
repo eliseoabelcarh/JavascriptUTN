@@ -70,7 +70,7 @@ position: absolute;
   float: left;
   border-radius: 1em;
   margin:0 2px 0 2px;
-  padding: 10px 2px 0 10px;
+  padding: 10px 8px 5px 10px;
   
   font-weight: 400;
   font-size: small;
@@ -84,7 +84,7 @@ position: absolute;
   float: left;
   border-radius: 1em;
   margin:0 2px 0 2px;
-  padding: 10px 2px 0 10px;
+  padding: 10px 8px 5px 10px;
   font-weight: 400;
   font-size: small;
   
@@ -97,7 +97,7 @@ position: absolute;
   float: left;
   border-radius: 1em;
   margin:0 2px 0 2px;
-  padding: 10px 2px 0 10px;
+  padding: 10px 8px 5px 10px;
   
   font-weight: 400;
   font-size: small;
@@ -195,7 +195,7 @@ position: absolute;
 
 #buttonAddTotalOrder {
   width: 100%;
-  height: 50px;
+  height: 40px;
   font-weight: bold;
   color: white;
   background-color: #ff7978;
@@ -375,14 +375,14 @@ position: absolute;
 #logo{
 
   height: 15%;
-  width: 100%;
+  width: 90%;
   /*background-color: palegreen;*/
 
 }
 
 #formContainer{
   height: auto;
-  width: 100%;
+  width: 90%;
   text-align: left;
   /*background-color: palevioletred;*/
 
@@ -440,11 +440,24 @@ position: absolute;
 }
 
 .orderCss{
-  margin: 4px 4px 4px 4px;
-  background-color: yellow;
-  width: 100%;
+  margin: 4px 8px 4px 4px;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgb(221, 221, 221) ;
+  width: 93%;
   height: auto;
   overflow: hidden;
+}
+
+.removeBtn{
+ 
+  border: 1px solid#f66969;
+  background: #f66969 url() no-repeat 0 -4px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  padding: 0 3px 0 3px;
+  float: right;
+  margin: 5px;
 }
 
 #totalDesc{
@@ -460,3 +473,73 @@ position: absolute;
   float: right;
   height: 99%;
 }
+
+
+
+
+select{
+  
+  border: 1px solid rgb(221, 221, 221);
+  background-color: white;
+ }
+
+
+
+
+input[type='checkbox'] {
+  visibility: hidden;
+  position: absolute;
+ }
+ input[type='checkbox']:checked {
+  position: absolute;
+ }
+
+
+
+
+input[type='checkbox'] + label {
+border: 1px solid rgb(221, 221, 221);
+padding: 2px 1px 0 5px;
+margin: 5px 0 0 0;
+width: 90%;
+display: block;
+text-align: left;
+color: rgb(66, 66, 66);
+cursor: pointer;
+position: relative;
+font-weight: 600;
+z-index: 2;
+transition: color 200ms ease-in;
+overflow: hidden;
+}
+
+input[type='checkbox'] + label::after{
+width: 10px;
+height: 10px;
+content: '';
+border: 2px solid #D1D7DC;
+background-color: #fff;
+background-repeat: no-repeat;
+background-position: 2px 3px;
+border-radius: 50%;
+z-index: 2;
+position: absolute;
+
+right: 5px;
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+transition: all 200ms ease-in;
+     
+}
+
+input[type='checkbox']:checked + label {
+  color: white;
+  background-color: #4c60e0;
+  transition: all 300ms ease-in;
+ }
+
+input[type='checkbox']:checked + label::after {
+  border: 3px solid white;
+  background-color: #4c60e0;
+ }

@@ -74,6 +74,8 @@ class ListContPlates {
                     this.dishBaseUno = dishBase1;
                     //console.log(this.dishBaseUno)
                     localStorage.setItem("dishBase1" ,JSON.stringify(dishBase1) );
+                    div.className += " active"; 
+                    
 
                   }
                 if(div.parentElement ==scrollCont2 ){ 
