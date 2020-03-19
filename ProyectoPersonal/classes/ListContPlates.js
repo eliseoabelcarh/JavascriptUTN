@@ -40,18 +40,23 @@ class ListContPlates {
                    
                     var arrayPlates = document.getElementsByClassName("contNamePlate")
                     for(var obj of arrayPlates ){
+                        console.log(obj)
                         
                         //y el parent del div actual es igual al div a borrar
                             if(obj.firstElementChild && ( obj.parentElement == div.parentElement  ) ){
                                 obj.firstElementChild.remove()
-                                
+                                obj.className = "contNamePlate"
+                               
 
                             }
                     }
 
                 //mostrar descripcion
                 div.appendChild(_plate.createPlateDescription())
-                //_plate.setActiveDescription(true)
+                //console.log(div.parentElement)
+                
+                
+                
                
 
 
@@ -84,6 +89,7 @@ class ListContPlates {
                     this.dishBaseDos = dishBase2;
                     //console.log(this.dishBaseDos)
                     localStorage.setItem("dishBase2" ,JSON.stringify(dishBase2) );
+                    div.className += " active"; 
                   }  
                  
                 

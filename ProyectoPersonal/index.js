@@ -118,15 +118,20 @@ function addTotalOrder(){
         }
 
         var ordersContainer = document.getElementById("ordersContainer");
-        var cont = ordersContainer.childElementCount
+        //no anda si se borran elementos
+        //var cont = ordersContainer.childElementCount
 
+        var cont = 9; //hace referencia a la cantidad de ordenes por default
         var i = 1;
 
         while(i<=cont){
 
             var orderNumber = "order" + i
             var orderSearched = JSON.parse(localStorage.getItem(orderNumber))
-            objectTotalOrders[orderNumber.normalize()]=orderSearched
+            if(orderSearched != null){
+                objectTotalOrders[orderNumber]=orderSearched
+            }
+            
 
             i++
         }              
@@ -137,6 +142,9 @@ function addTotalOrder(){
 
         console.log(objectTotalOrders)
         //creo un object con toddo el pedido y escribo un html en forma de json
+
+        var objetoString = JSON.stringify(objectTotalOrders)
+        PopUp.showMessage("Todos los Pedidos como objeto ", objetoString);
 
         
         

@@ -56,6 +56,7 @@ class Plate {
         var div = document.createElement("div");
         div.className = "contDescriptionPlate"
         div.textContent = this.getDescription();
+        
         return div;
 
     }
